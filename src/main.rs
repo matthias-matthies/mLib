@@ -31,9 +31,9 @@ fn _merge_sort<T: std::cmp::PartialOrd + Copy>(arr: &mut Vec<T>, left_bound: usi
     }
 }
 
-fn merge<T: std::cmp::PartialOrd + Copy>(arr: &mut Vec<T>, left_bound: usize, mid: usize, right_bound: usize) {
-    let left_arr = &arr[left_bound..=mid].to_owned();
-    let right_arr = &arr[mid + 1..=right_bound].to_owned();
+fn merge<T: std::cmp::PartialOrd + Copy>(arr: &mut Vec<T>, left_bound: usize, middle: usize, right_bound: usize) {
+    let left_arr = &arr[left_bound..=middle].to_owned();
+    let right_arr = &arr[middle + 1..=right_bound].to_owned();
 
     let mut i = 0;
     let mut j = 0;
